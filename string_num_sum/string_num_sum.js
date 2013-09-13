@@ -3,9 +3,13 @@ module.exports = function stringNumSum(input) {
     return parseInt(n,10);
   });
 
+  function isTrue(n) {
+    return n;
+  }
+
   function add(memo, num) {
     return memo + num;
   }
 
-  return numbers.reduce(add, 0);
+  return numbers.filter(isTrue).reduce(add, 0);
 };
