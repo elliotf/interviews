@@ -1,4 +1,11 @@
 module.exports = function stringNumSum(input) {
-  var numericOnly = input.replace(/[^0-9]/,'');
-  return parseInt(numericOnly, 10);
+  var numbers = input.split(/[^0-9]+/).map(function(n) {
+    return parseInt(n,10);
+  });
+
+  function add(memo, num) {
+    return memo + num;
+  }
+
+  return numbers.reduce(add, 0);
 };
