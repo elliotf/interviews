@@ -11,4 +11,8 @@ describe("stringNumSum", function() {
     expect(numSum('123')).to.equal(123);
     expect(numSum('0123')).to.equal(123);
   });
+
+  it("ignores non-numeric characters", function() {
+    expect(numSum('a123')).to.equal(123);
+  });
 });
