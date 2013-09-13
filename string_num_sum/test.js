@@ -16,7 +16,7 @@ describe("stringNumSum", function() {
     expect(numSum('a123')).to.equal(123);
   });
 
-  it("sums strings of digits together", function() {
+  it("sums each digit series together", function() {
     expect(numSum('02a430')).to.equal(432);
   });
 });
