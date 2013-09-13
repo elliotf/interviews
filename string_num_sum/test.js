@@ -9,5 +9,6 @@ describe("stringNumSum", function() {
 
   it("treats contiguous digits as one number", function() {
     expect(numSum('123')).to.equal(123);
+    expect(numSum('0123')).to.equal(123);
   });
 });
