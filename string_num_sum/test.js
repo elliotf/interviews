@@ -4,6 +4,6 @@ var expect = require('chai').expect
 
 describe("stringNumSum", function() {
   it("returns the result as a number", function() {
-    expect(numSum('0')).to.be(0);
+    expect(numSum('0')).to.equal(0);
   });
 });
