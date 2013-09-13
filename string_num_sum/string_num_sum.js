@@ -1,3 +1,3 @@
-module.exports = function stringNumSum() {
-  return 0;
+module.exports = function stringNumSum(input) {
+  return parseInt(input);
 };
