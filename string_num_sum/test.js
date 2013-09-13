@@ -15,4 +15,8 @@ describe("stringNumSum", function() {
   it("ignores non-numeric characters", function() {
     expect(numSum('a123')).to.equal(123);
   });
+
+  it("sums strings of digits together", function() {
+    expect(numSum('02a430')).to.equal(432);
+  });
 });
