@@ -1,10 +1,10 @@
 String.prototype.isPalindrome = function() {
   var str = this;
-  var isOdd = str.length % 2;
-  var half = parseInt(str.length / 2, 10) + isOdd;
+  var half = parseInt(str.length / 2, 10);
 
-  var latter = str.substr(half);
-  latter = latter.split('').reverse().join('');
+  for (var i = 0, last = str.length - 1; i < half; ++i) {
+    if (str[i] != str[last - i]) return false;
+  }
 
-  return str.indexOf(latter) === 0;
+  return true;
 };

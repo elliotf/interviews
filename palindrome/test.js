@@ -4,16 +4,15 @@ var expect = require('chai').expect
 
 describe("Palindrome", function() {
   it("returns false for non-palindromes", function() {
-    var str = "ralph";
-    expect(str.isPalindrome()).to.be.false;
+    expect("ra".isPalindrome()).to.be.false;
+    expect("ralph".isPalindrome()).to.be.false;
+    expect("not ralph".isPalindrome()).to.be.false;
   });
 
   it("returns true for palindromes", function() {
-    var str = "bob";
-    expect(str.isPalindrome()).to.be.true;
-  });
-
-  it("handles long strings", function() {
-    expect("waffles sis selffaw".isPalindrome()).to.be.true;
+    expect("a".isPalindrome()).to.be.true;
+    expect("oo".isPalindrome()).to.be.true;
+    expect("bob".isPalindrome()).to.be.true;
+    expect("stressed desserts".isPalindrome()).to.be.true;
   });
 });
