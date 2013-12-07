@@ -2,4 +2,4 @@ test:
 	./node_modules/.bin/mocha --recursive -R list */test.js
 
 testwatch:
-	./node_modules/.bin/mocha -w --recursive -R list */test.js
+	./node_modules/.bin/chicken -c 'clear; time make test' .

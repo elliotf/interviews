@@ -11,8 +11,11 @@
   },
   "author": "Elliot Foster",
   "license": "MIT",
-  "devDependencies": {
-    "chai": "~1.7.2",
-    "mocha": "~1.12.1"
+  "dependencies": {
+    "chai": "~1",
+    "mocha": "~1",
+    "chicken-little": "~0",
+    "lazy": "~1",
+    "lodash": "~2"
   }
 }
