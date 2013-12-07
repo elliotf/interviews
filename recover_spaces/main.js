@@ -18,37 +18,27 @@ Respacer.prototype._loadLookup = function() {
   });
 }
 
-/*
-function RecoverSpaces(input) {
-  var tuples   = []
+Respacer.prototype.findTuples = function(input) {
+  var self     = this
+    , tuples   = []
     , tracking = ['']
-    , i        = 0
-    , lookup   = {}
-    , longest  = 0
   ;
-
-  function findWords() {
     for(var i = 0, l = input.length; i < l; ++i) {
       tracking.forEach(function(str, start){
-        if(str === null) console.log("UNDEF");
+        if(null === str || undefined == str) {
+          return;
+        }
         tracking[start] = str = str + input[i];
 
-        if (lookup[str]) {
+        if (self._lookup[str]) {
           tuples[start] = tuples[start] || [];
           tuples[start][i] = true;
           tracking[i + 1] = '';
         }
       });
     }
-  }
 
-  function findLongestTuples() {
-  }
-
-  findWords(input);
-
-  console.log(tuples);
+  return tuples;
 }
-*/
 
 module.exports = Respacer;

@@ -35,6 +35,22 @@ describe.only("Recover spaces", function() {
   });
 
   describe("#findTuples", function() {
+    beforeEach(function() {
+      this.respacer._loadLookup();
+    });
+
+    it("finds beginnings/ends of words in the string", function() {
+      var input = 'big'
+        , output = this.respacer.findTuples(input);
+      ;
+
+      expect(output).to.have.length(3);
+      expect(output).to.deep.equal([
+        [true, , true]
+        , [, true]
+        , [, , true]
+      ])
+    });
   });
 
   describe.skip("#recoverSpaces", function() {
