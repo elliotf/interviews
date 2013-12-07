@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-  , numSum = require('./palindrome')
+  , numSum = require('./main')
 ;
 
 describe("Palindrome", function() {

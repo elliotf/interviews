@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-  , numSum = require('./string_num_sum')
+  , numSum = require('./main')
 ;
 
 describe("stringNumSum", function() {
