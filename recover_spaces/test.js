@@ -31,9 +31,6 @@ describe.only("Recover spaces", function() {
     });
   });
 
-  describe("#findLongestTuples", function() {
-  });
-
   describe("#findTuples", function() {
     beforeEach(function() {
       this.respacer._loadLookup();
@@ -49,6 +46,20 @@ describe.only("Recover spaces", function() {
         [true, , true]
         , [, true]
         , [, , true]
+      ])
+    });
+  });
+
+  describe("#findLongestTuples", function() {
+    it("returns the longest tuples (or the shortest tuple chain)", function() {
+      var input = [
+        [true, , true]
+        ,
+        , [, ,true]
+      ];
+
+      expect(this.respacer.findLongestTuples(input)).to.deep.equal([
+        [0,2]
       ])
     });
   });
