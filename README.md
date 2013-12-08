@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/elliotf/interviews.png)](http://travis-ci.org/elliotf/interviews)
+
 # interviews
 
 Things I've been asked to do during interviews, but with tests.
