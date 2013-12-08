@@ -1,7 +1,11 @@
-var expect  = require('chai').expect
+var chai    = require('chai')
+  , expect  = chai.expect
   , sweeper = require('./main')
   , _       = require('lodash')
 ;
+
+require('mocha-sinon');
+chai.use(require('sinon-chai'));
 
 describe.only("Sweeper", function() {
   beforeEach(function() {
