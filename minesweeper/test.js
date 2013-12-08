@@ -7,7 +7,7 @@ var chai    = require('chai')
 require('mocha-sinon');
 chai.use(require('sinon-chai'));
 
-describe.only("Sweeper", function() {
+describe("Sweeper", function() {
   beforeEach(function() {
     this.game = new sweeper.Game();
   });
